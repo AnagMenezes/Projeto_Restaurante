@@ -41,7 +41,7 @@ O projeto está sendo organizado seguindo uma separação de responsabilidades e
 * [x] Integração com JPA/Hibernate
 * [x] Criação automática das tabelas pelo Hibernate
 * [x] Estrutura inicial do Repository
-* [ ] Estrutura inicial do Service
+* [x] Estrutura inicial do Service
 * [ ] Desenvolvimento dos Controllers
 * [ ] Implementação dos endpoints da API
 * [ ] Relacionamento entre as entidades

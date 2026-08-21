@@ -3,8 +3,6 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
-import jakarta.persistence.JoinColumn;
-import jakarta.persistence.ManyToOne;
 import jakarta.persistence.OneToMany;
 import java.util.List;
 import java.time.LocalDateTime;
@@ -19,7 +17,4 @@ public class Pedido {
     private String status;
     @OneToMany(mappedBy = "pedido")
     private List<ItemPedido> itens;
-    @ManyToOne
-    @JoinColumn(name = "categoria_id")
-    private Categoria categoria;
 }

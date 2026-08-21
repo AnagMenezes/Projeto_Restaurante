@@ -5,8 +5,6 @@ import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.JoinColumn;
 import jakarta.persistence.ManyToOne;
-import jakarta.persistence.OneToMany;
-import java.util.List;
 
 @Entity
 public class ItemPedido{
@@ -15,9 +13,11 @@ public class ItemPedido{
     private Integer id;
     private Integer quantidade;
     private Double precoUnitario;
+
     @ManyToOne
     @JoinColumn (name = "pedido_id")
     private Pedido pedido;
+
     @ManyToOne
     @JoinColumn(name = "produto_id")
     private Produto produto;

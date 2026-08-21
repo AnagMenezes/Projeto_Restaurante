@@ -3,7 +3,6 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
-import jakarta.persistence.JoinColumn;
 import jakarta.persistence.ManyToOne;
 import jakarta.persistence.OneToMany;
 import java.util.List;
@@ -20,4 +19,7 @@ public class Produto {
     private Boolean disponivel;
     @OneToMany(mappedBy = "produto") ///objeto referenciado no itenproduto
     private List<ItemPedido> itensPedido;
+
+    @ManyToOne
+    private Categoria categoria;
 }

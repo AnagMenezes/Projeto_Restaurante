@@ -1,6 +1,8 @@
 package com.anagabriella.restaurante.service;
 import org.springframework.stereotype.Service;
 import com.anagabriella.restaurante.entity.Pedido;
+import com.anagabriella.restaurante.entity.Produto;
+import com.anagabriella.restaurante.entity.ItemPedido;
 import com.anagabriella.restaurante.repository.PedidoRepository;
 import java.util.List;
 import java.util.Optional;
@@ -32,4 +34,38 @@ public Pedido atualizarPedido(Pedido pedido) {
 public List<Pedido> buscarTodosPedido() {
     return pedidoRepository.findAll();
 }
+
+public Pedido verificarExistenciaPedido(Long id) {
+
+    Optional<Pedido> pedido = pedidoRepository.findById(id);
+
+    if (pedido.isEmpty()) {
+    throw new IllegalArgumentException("Pedido inexistente.");
+    }
+    return pedido.get();
 }
+
+public Pedido adicionarItem(Long idPedido, ItemPedido novoItem) {
+    Pedido pedido = verificarExistenciaPedido(idPedido);
+
+    novoItem.setPedido(pedido);
+
+    pedido.getItens().add(novoItem); 
+
+    return pedidoRepository.save(pedido);
+}
+
+/*public Pedido atualizarStatus(Long idPedido, String novoStatus) {
+    Pedido pedido = verificarExistenciaPedido(idPedido);
+
+    pedido.setStatus(novoStatus);
+
+    return pedidoRepository.save(pedido);*/
+}
+
+
+
+
+
+
+

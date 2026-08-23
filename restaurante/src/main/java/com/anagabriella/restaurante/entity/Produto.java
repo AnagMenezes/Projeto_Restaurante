@@ -22,4 +22,9 @@ public class Produto {
 
     @ManyToOne
     private Categoria categoria;
+
+    public Boolean getDisponivel() {
+    return disponivel;
+}
+
 }

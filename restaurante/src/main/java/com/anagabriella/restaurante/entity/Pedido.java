@@ -14,12 +14,12 @@ public class Pedido {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
-
+    
     private LocalDateTime dataPedido;
     private Double valorTotal;
     private String status;
   
-   @OneToMany(mappedBy = "pedido", cascade = CascadeType.ALL)///Ao colocar CascadeType.ALL na lista de itens do seu Pedido, quando você executa pedidoRepository.save(pedido), o Spring faz o trabalho sujo. Ele vai ao banco, salva os itens de forma invisível e depois salva o pedido, mantendo tudo amarrado.
+   @OneToMany(mappedBy = "pedido", cascade = CascadeType.ALL)///colocando CascadeType.ALL na lista de itens do pedido, quando você executa pedidoRepository.save(pedido), o Spring faz o trabalho sujo. Ele vai ao banco, salva os itens de forma invisível e depois salva o pedido, mantendo tudo amarrado.
     private List<ItemPedido> itens = new ArrayList<>();
 
     public List<ItemPedido> getItens() {
@@ -29,7 +29,6 @@ public class Pedido {
     public void setItens(List<ItemPedido> itens) {
         this.itens = itens;
     }
-
 
     public LocalDateTime getDataPedido() {
         return dataPedido;

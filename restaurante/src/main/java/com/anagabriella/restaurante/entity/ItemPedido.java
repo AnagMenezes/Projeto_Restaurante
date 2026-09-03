@@ -43,4 +43,7 @@ public class ItemPedido{
             throw new IllegalArgumentException("Quantidade inválida.");
     }
 }
+    public Produto getProduto(){
+        return produto;
+}
 }

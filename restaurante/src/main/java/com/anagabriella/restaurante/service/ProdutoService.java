@@ -18,7 +18,7 @@ public Produto cadastrarProduto(Produto produto) {
     return produtoRepository.save(produto);
 }
 
-public Optional<Produto> buscaProdutoPorId(Long id) {
+public Optional<Produto> buscaProdutoPorId(Integer id) {
     return produtoRepository.findById(id);
 }
 

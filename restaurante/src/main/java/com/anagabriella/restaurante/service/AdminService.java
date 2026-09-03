@@ -17,7 +17,7 @@ public Admin cadastrarAdmin(Admin admin) {
     return adminRepository.save(admin);
 }
 
-public Optional<Admin> buscarAdmPorId(Long id) {
+public Optional<Admin> buscarAdminPorId(Integer id) {
     return adminRepository.findById(id);
 }
 
@@ -29,7 +29,7 @@ public Admin atualizarAdmin(Admin admin) {
     return adminRepository.save(admin);
 }
 
-public List<Admin> buscarTodosAdm() {
+public List<Admin> buscarTodosAdmin() {
     return adminRepository.findAll();
 }
 }

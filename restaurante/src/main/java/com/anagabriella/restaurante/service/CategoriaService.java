@@ -17,7 +17,7 @@ public Categoria cadastrarCategoria(Categoria categoria) {
     return categoriaRepository.save(categoria);
 }
 
-public Optional<Categoria> buscaCategoriaPorId(Long id) {
+public Optional<Categoria> buscarCategoriaPorId(Integer id) {
     return categoriaRepository.findById(id);
 }
 

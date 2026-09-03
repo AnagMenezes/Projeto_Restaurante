@@ -23,8 +23,12 @@ public class Produto {
     @ManyToOne
     private Categoria categoria;
 
-    public Boolean getDisponivel() {
+public Boolean getDisponivel() {
     return disponivel;
+}
+
+public Integer getId() {
+    return id;
 }
 
 }

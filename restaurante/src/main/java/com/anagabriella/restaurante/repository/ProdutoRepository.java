@@ -4,6 +4,6 @@ import com.anagabriella.restaurante.entity.Produto;
 import org.springframework.data.jpa.repository.JpaRepository;
 ///spring data jpa
 
-public interface ProdutoRepository extends JpaRepository<Produto, Long> {
+public interface ProdutoRepository extends JpaRepository<Produto, Integer> {
 }
 

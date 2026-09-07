@@ -24,36 +24,31 @@ public class Pedido {
 
     public List<ItemPedido> getItens() {
         return itens;
-    }
-
+}
+    public Integer getId(){
+        return id;
+}
     public void setItens(List<ItemPedido> itens) {
         this.itens = itens;
-    }
-
+}
     public LocalDateTime getDataPedido() {
         return dataPedido;
-    }
-
+}
     public void setDataPedido(LocalDateTime dataPedido) {
         this.dataPedido = dataPedido;
-    }
-
+}
     public Double getValorTotal() {
         return valorTotal;
-    }
-
+}
     public void setValorTotal(Double valorTotal) {
         this.valorTotal = valorTotal;
-    }
-
+}
     public String getStatus() {
         return status;
-    }
-
+}
     public void setStatus(String status) {
         this.status = status;
-    }
-
+}
     public void atualizarValorTotal() {
     Double soma = 0.0; 
     
@@ -62,7 +57,5 @@ public class Pedido {
     }
     this.valorTotal = soma;
 }
-
-
 
 }

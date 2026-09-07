@@ -15,4 +15,8 @@ public class Categoria {
     
     @OneToMany(mappedBy = "categoria")
     private List<Produto> produtos;
+
+public String getnome(){
+    return nome;
+}
 }

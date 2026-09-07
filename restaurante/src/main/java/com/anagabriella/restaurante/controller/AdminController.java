@@ -1,7 +1,8 @@
 package com.anagabriella.restaurante.controller;
 import com.anagabriella.restaurante.entity.Admin;
 import com.anagabriella.restaurante.service.AdminService;
-
+import java.util.List;
+import java.util.Optional;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -10,9 +11,6 @@ import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
-
-import java.util.List;
-import java.util.Optional;
 
 @RestController
 @RequestMapping("/admin") ///mapeamento de requisições
@@ -24,28 +22,29 @@ public class AdminController {
         this.adminService = adminService;
     }
 
-    @PostMapping
+@PostMapping
     public Admin cadastrarAdmin(@RequestBody Admin admin) {
         return adminService.cadastrarAdmin(admin);
     }
 
-    @GetMapping("/{id}")
+@GetMapping("/{id}")
     public Optional<Admin> buscarAdminPorId(@PathVariable Integer id) {
         return adminService.buscarAdminPorId(id);
-    }
+    }   
 
-    @GetMapping
+@GetMapping
     public List<Admin> buscarTodosAdmin() {
         return adminService.buscarTodosAdmin();
     }
 
-    @PutMapping
+@PutMapping
     public Admin atualizarAdmin(@RequestBody Admin admin) {
         return adminService.atualizarAdmin(admin);
     }
 
-    @DeleteMapping
+@DeleteMapping
     public void apagarAdmin(@RequestBody Admin admin) {
         adminService.apagarAdmin(admin);
     }
+
 }

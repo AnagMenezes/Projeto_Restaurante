@@ -24,12 +24,15 @@ public class ItemPedidoService {
 
     public ItemPedido cadastrarItemPedido(ItemPedido itemPedido) {
 
-        validarProduto(
+        Produto produto = validarProduto(
                 itemPedido.getProduto().getId(),
                 itemPedido.getQuantidade()
         );
 
+        itemPedido.setPrecoUnitario(produto.getPreco());
+
         return itemPedidoRepository.save(itemPedido);
+
     }
 
     public Optional<ItemPedido> buscarItemPedidoPorId(Integer id) {
@@ -53,7 +56,7 @@ public class ItemPedidoService {
         Optional<ItemPedido> item = itemPedidoRepository.findById(id);
 
         if (item.isEmpty()) {
-            throw new IllegalArgumentException("ItemPedido não encontrado");
+            throw new IllegalArgumentException("Item Pedido não encontrado");
         }
 
         return item.get();
@@ -70,7 +73,7 @@ public class ItemPedidoService {
         return produto.get();
     }
 
-    public void validarProduto(Integer id, Integer quantidade) {
+    public Produto validarProduto(Integer id, Integer quantidade) {
 
         Produto produto = verificarExistenciaProduto(id);
 
@@ -80,5 +83,6 @@ public class ItemPedidoService {
         if (!produto.getDisponivel()) {
             throw new IllegalArgumentException("Produto indisponível.");
         }
+        return produto;
     }
 }

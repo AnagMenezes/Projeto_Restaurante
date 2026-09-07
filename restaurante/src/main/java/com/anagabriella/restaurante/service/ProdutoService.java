@@ -14,23 +14,23 @@ public class ProdutoService {
 }
 
 
-public Produto cadastrarProduto(Produto produto) {
-    return produtoRepository.save(produto);
+    public Produto cadastrarProduto(Produto produto) {
+        return produtoRepository.save(produto);
 }
 
-public Optional<Produto> buscaProdutoPorId(Integer id) {
-    return produtoRepository.findById(id);
+    public Optional<Produto> buscaProdutoPorId(Integer id) {
+        return produtoRepository.findById(id);
 }
 
-public void apagarProduto(Produto produto) {
-    produtoRepository.delete(produto);
+    public void apagarProduto(Produto produto) {
+        produtoRepository.delete(produto);
 }
 
-public Produto atualizarProduto(Produto produto) {
-    return produtoRepository.save(produto);
+    public Produto atualizarProduto(Produto produto) {
+        return produtoRepository.save(produto);
 }
 
-public List<Produto> buscarTodosProdutos() {
-    return produtoRepository.findAll();
+    public List<Produto> buscarTodosProdutos() {
+        return produtoRepository.findAll();
 }
 }

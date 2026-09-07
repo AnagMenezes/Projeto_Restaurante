@@ -13,23 +13,23 @@ public class CategoriaService {
         this.categoriaRepository = categoriaRepository;
 }
 
-public Categoria cadastrarCategoria(Categoria categoria) {
-    return categoriaRepository.save(categoria);
+    public Categoria cadastrarCategoria(Categoria categoria) {
+        return categoriaRepository.save(categoria);
 }
 
-public Optional<Categoria> buscarCategoriaPorId(Integer id) {
-    return categoriaRepository.findById(id);
+    public Optional<Categoria> buscarCategoriaPorId(Integer id) {
+        return categoriaRepository.findById(id);
 }
 
-public void apagarCategoria(Categoria categoria) {
-    categoriaRepository.delete(categoria);
+    public void apagarCategoria(Categoria categoria) {
+        categoriaRepository.delete(categoria);
 }
 
-public Categoria atualizarCategoria(Categoria categoria) {
-    return categoriaRepository.save(categoria);
+    public Categoria atualizarCategoria(Categoria categoria) {
+        return categoriaRepository.save(categoria);
 }
 
-public List<Categoria> buscarTodasCategorias() {
-    return categoriaRepository.findAll();
+    public List<Categoria> buscarTodasCategorias() {
+        return categoriaRepository.findAll();
 }
 }

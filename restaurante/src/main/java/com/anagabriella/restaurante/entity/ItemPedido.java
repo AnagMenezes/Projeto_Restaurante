@@ -25,25 +25,28 @@ public class ItemPedido{
     public Double getPrecoUnitario() {
     return precoUnitario;
 }
-
     public Integer getQuantidade() {
     return quantidade;
 }
-
     public void setPedido(Pedido pedido) {
         this.pedido = pedido;
-    }
-
+}
     public Double calcularValorTotal() {
         return this.precoUnitario * this.quantidade;
 }
-
     public void validarQuantidade (Integer quantidade ){
         if (quantidade <= 0){
             throw new IllegalArgumentException("Quantidade inválida.");
-    }
+        }
 }
     public Produto getProduto(){
         return produto;
 }
+    public void setPrecoUnitario(Double precoUnitario) {
+        this.precoUnitario = precoUnitario;
+}
+    public Double getValorTotal() {
+        return calcularValorTotal();
+}
+
 }

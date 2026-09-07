@@ -24,27 +24,27 @@ public class ProdutoController {
         this.produtoService = produtoService;
     }
 
-    @PostMapping
+@PostMapping
     public Produto cadastrarProduto(@RequestBody Produto produto) {
         return produtoService.cadastrarProduto(produto);
     }
 
-    @GetMapping("/{id}")
+@GetMapping("/{id}")
     public Optional<Produto> buscarProdutoPorId(@PathVariable Integer id) {
         return produtoService.buscaProdutoPorId(id);
     }
 
-    @GetMapping
+@GetMapping
     public List<Produto> buscarTodosProdutos() {
         return produtoService.buscarTodosProdutos();
     }
 
-    @PutMapping
+@PutMapping
     public Produto atualizarProduto(@RequestBody Produto produto) {
         return produtoService.atualizarProduto(produto);
     }
 
-    @DeleteMapping
+@DeleteMapping
     public void apagarProduto(@RequestBody Produto produto) {
         produtoService.apagarProduto(produto);
     }

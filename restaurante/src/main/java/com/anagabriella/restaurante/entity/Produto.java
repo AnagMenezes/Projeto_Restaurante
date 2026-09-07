@@ -17,18 +17,32 @@ public class Produto {
     private Double preco;
     private String imagem;
     private Boolean disponivel;
+
     @OneToMany(mappedBy = "produto") ///objeto referenciado no itenproduto
     private List<ItemPedido> itensPedido;
 
     @ManyToOne
     private Categoria categoria;
 
-public Boolean getDisponivel() {
-    return disponivel;
+    public Boolean getDisponivel() {
+        return disponivel;
 }
-
-public Integer getId() {
-    return id;
+    public Integer getId() {
+        return id;
 }
-
+    public Double getPreco(){
+        return preco;
+}
+    public void setPreco(Double preco) {
+        this.preco = preco;
+}
+    public String getNome(){
+        return nome;
+}
+    public String getDescricao(){
+        return descricao;
+}
+    public String getImagen(){
+        return imagem;
+}
 }

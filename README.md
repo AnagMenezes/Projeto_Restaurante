@@ -42,11 +42,11 @@ O projeto está sendo organizado seguindo uma separação de responsabilidades e
 * [x] Criação automática das tabelas pelo Hibernate
 * [x] Estrutura inicial do Repository
 * [x] Estrutura inicial do Service
-* [ ] Desenvolvimento dos Controllers
-* [ ] Implementação dos endpoints da API
-* [ ] Relacionamento entre as entidades
-* [ ] Implementação das operações de cadastro, consulta, atualização e exclusão
-* [ ] Testes da API
+* [x] Desenvolvimento dos Controllers
+* [x] Implementação dos endpoints da API
+* [x] Relacionamento entre as entidades
+* [x] Implementação das operações de cadastro, consulta, atualização e exclusão
+* [x] Testes da API
 * [ ] Integração com uma interface frontend
 
 ## Aprendizados

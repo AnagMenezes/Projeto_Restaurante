@@ -1,0 +1,80 @@
+.cardapio-categoria {
+  min-height: 100vh;
+
+  padding: 70px 80px 100px;
+
+  box-sizing: border-box;
+
+  background-color: #f3dcae;
+
+  color: #24382a;
+}
+
+
+/* Cabeçalho */
+
+.cardapio-categoria h1 {
+  max-width: 1100px;
+
+  margin: 0 auto 12px;
+
+  font-family: 'Playfair Display', serif;
+
+  font-size: 52px;
+
+  color: #24382a;
+}
+
+
+/* Container dos produtos */
+
+.produtos-container {
+  max-width: 1100px;
+
+  margin: 45px auto 0;
+
+  display: grid;
+
+  grid-template-columns: repeat(3, 1fr);
+
+  gap: 25px;
+}
+
+
+/* Mensagens */
+
+.cardapio-categoria > p {
+  max-width: 1100px;
+
+  margin-left: auto;
+  margin-right: auto;
+
+  color: #5d625b;
+}
+
+
+/* Responsividade */
+
+@media (max-width: 950px) {
+
+  .produtos-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+}
+
+@media (max-width: 650px) {
+
+  .cardapio-categoria {
+    padding: 50px 25px 70px;
+  }
+
+  .cardapio-categoria h1 {
+    font-size: 40px;
+  }
+
+  .produtos-container {
+    grid-template-columns: 1fr;
+  }
+
+}

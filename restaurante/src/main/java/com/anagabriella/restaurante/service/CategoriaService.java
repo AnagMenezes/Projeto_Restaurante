@@ -21,12 +21,18 @@ public class CategoriaService {
         return categoriaRepository.findById(id);
 }
 
-    public void apagarCategoria(Categoria categoria) {
-        categoriaRepository.delete(categoria);
+    public void deletarCategoria(Integer id) {
+        categoriaRepository.deleteById(id);
 }
 
-    public Categoria atualizarCategoria(Categoria categoria) {
-        return categoriaRepository.save(categoria);
+    public Categoria atualizarCategoria(Integer id, Categoria categoria) {
+
+    Categoria categoriaExistente = categoriaRepository.findById(id)
+            .orElseThrow(() -> new RuntimeException("Categoria não encontrada."));
+
+    categoriaExistente.setNome(categoria.getNome());
+
+    return categoriaRepository.save(categoriaExistente);
 }
 
     public List<Categoria> buscarTodasCategorias() {

@@ -1,0 +1,51 @@
+.admin {
+  min-height: 100vh;
+  padding: 70px 80px 100px;
+  box-sizing: border-box;
+  background-color: #f3ead8;
+  color: #24382a;
+}
+
+.admin h1 {
+  max-width: 1100px;
+  margin: 0 auto 12px;
+  font-family: 'Playfair Display', serif;
+  font-size: 52px;
+  color: #24382a;
+}
+
+.admin > p {
+  max-width: 1100px;
+  margin: 0 auto;
+  color: #5d625b;
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+.admin-cards {
+  max-width: 1100px;
+  margin: 50px auto 0;
+
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 25px;
+}
+
+.admin-cards a {
+  text-decoration: none;
+  color: inherit;
+}
+
+@media (max-width: 700px) {
+  .admin {
+    padding: 50px 25px 70px;
+  }
+
+  .admin h1 {
+    font-size: 40px;
+  }
+
+  .admin-cards {
+    grid-template-columns: 1fr;
+  }
+}

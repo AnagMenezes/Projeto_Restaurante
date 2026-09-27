@@ -1,0 +1,82 @@
+.promocoes {
+  min-height: 100vh;
+  padding: 70px 80px;
+  background-color: #f3dcae;
+  color: #24382a;
+  box-sizing: border-box;
+}
+
+.promocoes-intro {
+  max-width: 800px;
+  margin: 0 auto 60px;
+  text-align: center;
+}
+
+.promocoes-label {
+  font-size: 14px;
+  letter-spacing: 3px;
+  font-weight: bold;
+}
+
+.promocoes-intro h1 {
+  margin: 15px 0;
+  font-family: 'Playfair Display', serif;
+  font-size: 48px;
+}
+
+.promocoes-intro p {
+  font-size: 18px;
+  line-height: 1.7;
+}
+
+.promocoes-container {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.promocao-card {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+
+  background-color: #fffaf0;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.promocao-imagem {
+  min-height: 280px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background-color: #d8c9aa;
+}
+
+.promocao-info {
+  padding: 40px;
+}
+
+.promocao-info h2 {
+  margin-top: 0;
+  font-family: 'Playfair Display', serif;
+  font-size: 30px;
+}
+
+.promocao-info p {
+  line-height: 1.7;
+}
+
+@media (max-width: 700px) {
+  .promocoes {
+    padding: 50px 25px;
+  }
+
+  .promocoes-intro h1 {
+    font-size: 38px;
+  }
+
+  .promocao-card {
+    grid-template-columns: 1fr;
+  }
+}

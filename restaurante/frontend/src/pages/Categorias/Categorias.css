@@ -1,0 +1,156 @@
+.categorias {
+  min-height: 100vh;
+  padding: 70px 80px 100px;
+  box-sizing: border-box;
+  background-color: #f3ead8;
+  color: #24382a;
+}
+
+.categorias h1 {
+  max-width: 1100px;
+  margin: 0 auto 12px;
+  font-family: 'Playfair Display', serif;
+  font-size: 48px;
+  color: #24382a;
+}
+
+.categorias > p {
+  max-width: 1100px;
+  margin: 0 auto 35px;
+  color: #5d625b;
+  line-height: 1.6;
+}
+
+/* Formulário */
+
+.categoria-form {
+  max-width: 1100px;
+  margin: 0 auto 40px;
+
+  display: flex;
+  gap: 12px;
+}
+
+.categoria-form input {
+  flex: 1;
+  padding: 14px 16px;
+
+  border: 1px solid #cbbd9f;
+  border-radius: 8px;
+
+  background-color: #fffaf0;
+  color: #24382a;
+  font-size: 15px;
+  outline: none;
+}
+
+.categoria-form input:focus {
+  border-color: #a88955;
+}
+
+.categoria-form button {
+  padding: 14px 22px;
+
+  border: none;
+  border-radius: 8px;
+
+  background-color: #24382a;
+  color: #f3ead8;
+
+  font-size: 14px;
+  font-weight: bold;
+  cursor: pointer;
+
+  transition: background-color 0.2s ease;
+}
+
+.categoria-form button:hover {
+  background-color: #36543e;
+}
+
+/* Lista */
+
+.categorias-lista {
+  max-width: 1100px;
+  margin: 0 auto;
+
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+.categoria-item {
+  padding: 25px;
+
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  background-color: #fffaf0;
+  border: 1px solid #ddd2bc;
+  border-radius: 10px;
+
+  box-shadow: 0 5px 15px rgba(36, 56, 42, 0.07);
+}
+
+.categoria-item h2 {
+  flex: 1;
+
+  margin: 0;
+
+  font-family: 'Playfair Display', serif;
+  font-size: 23px;
+  font-weight: normal;
+  color: #24382a;
+}
+
+.categoria-item input {
+  flex: 1;
+  padding: 10px 12px;
+
+  border: 1px solid #cbbd9f;
+  border-radius: 6px;
+
+  background-color: #fffaf0;
+  color: #24382a;
+  outline: none;
+}
+
+.categoria-item button {
+  padding: 9px 13px;
+
+  border: none;
+  border-radius: 6px;
+
+  background-color: #24382a;
+  color: #f3ead8;
+
+  font-size: 12px;
+  cursor: pointer;
+}
+
+.categoria-item button:hover {
+  background-color: #36543e;
+}
+
+@media (max-width: 750px) {
+  .categorias {
+    padding: 50px 25px 70px;
+  }
+
+  .categorias h1 {
+    font-size: 40px;
+  }
+
+  .categoria-form {
+    flex-direction: column;
+  }
+
+  .categorias-lista {
+    grid-template-columns: 1fr;
+  }
+
+  .categoria-item {
+    flex-wrap: wrap;
+  }
+}

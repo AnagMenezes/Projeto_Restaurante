@@ -1,0 +1,264 @@
+.produtos {
+  min-height: 100vh;
+  padding: 70px 80px 100px;
+  box-sizing: border-box;
+
+  background-color: #f3dcae;
+  color: #24382a;
+}
+
+/* Título da página */
+
+.produtos h1 {
+  max-width: 1100px;
+  margin: 0 auto 12px;
+
+  font-family: 'Playfair Display', serif;
+  font-size: 48px;
+  font-weight: normal;
+
+  color: #24382a;
+}
+
+.produtos > p {
+  max-width: 1100px;
+  margin: 0 auto 35px;
+
+  color: #5d625b;
+  line-height: 1.6;
+}
+
+
+/* Formulário */
+
+.produto-form {
+  max-width: 1100px;
+  margin: 0 auto 50px;
+  padding: 30px;
+
+  box-sizing: border-box;
+
+  background-color: #fffaf0;
+  border: 1px solid #ddd2bc;
+  border-radius: 12px;
+
+  box-shadow: 0 5px 18px rgba(36, 56, 42, 0.08);
+}
+
+.produto-form h2 {
+  margin: 0 0 25px;
+
+  font-family: 'Playfair Display', serif;
+  font-size: 28px;
+  font-weight: normal;
+
+  color: #24382a;
+}
+
+
+/* Campos do formulário */
+
+.produto-form input,
+.produto-form textarea,
+.produto-form select {
+  width: 100%;
+  padding: 13px 15px;
+  margin-bottom: 15px;
+
+  box-sizing: border-box;
+
+  border: 1px solid #cbbd9f;
+  border-radius: 7px;
+
+  background-color: #fffdf8;
+  color: #24382a;
+
+  font-family: inherit;
+  font-size: 14px;
+
+  outline: none;
+}
+
+.produto-form textarea {
+  min-height: 100px;
+  resize: vertical;
+}
+
+.produto-form input:focus,
+.produto-form textarea:focus,
+.produto-form select:focus {
+  border-color: #a88955;
+}
+
+
+/* Checkbox */
+
+.produto-form label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+
+  margin-bottom: 18px;
+
+  color: #5d625b;
+  font-size: 14px;
+}
+
+.produto-form label input {
+  width: auto;
+  margin: 0;
+}
+
+
+/* Botão do formulário */
+
+.produto-form button {
+  padding: 13px 22px;
+
+  border: none;
+  border-radius: 7px;
+
+  background-color: #24382a;
+  color: #f3ead8;
+
+  font-size: 14px;
+  font-weight: bold;
+
+  cursor: pointer;
+
+  transition: background-color 0.2s ease;
+}
+
+.produto-form button:hover {
+  background-color: #36543e;
+}
+
+
+/* Lista de produtos */
+
+.produtos-lista {
+  max-width: 1100px;
+  margin: 0 auto;
+
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+.produtos-lista h2 {
+  grid-column: 1 / -1;
+
+  margin: 0 0 5px;
+
+  font-family: 'Playfair Display', serif;
+  font-size: 28px;
+  font-weight: normal;
+
+  color: #24382a;
+}
+
+
+/* Card de produto */
+
+.produto-item {
+  padding: 25px;
+
+  background-color: #fffaf0;
+  border: 1px solid #ddd2bc;
+  border-radius: 10px;
+
+  box-shadow: 0 5px 15px rgba(36, 56, 42, 0.07);
+
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.produto-item:hover {
+  transform: translateY(-3px);
+
+  box-shadow: 0 9px 22px rgba(36, 56, 42, 0.12);
+}
+
+
+/* Informações do produto */
+
+.produto-item h3 {
+  margin: 0 0 10px;
+
+  font-family: 'Playfair Display', serif;
+  font-size: 24px;
+  font-weight: normal;
+
+  color: #24382a;
+}
+
+.produto-item p {
+  margin: 6px 0;
+
+  color: #5d625b;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.produto-item .produto-preco {
+  margin-top: 15px;
+
+  font-family: 'Playfair Display', serif;
+  font-size: 20px;
+  font-weight: bold;
+
+  color: #a17d42;
+}
+
+
+/* Botões dos produtos */
+
+.produto-item button {
+  margin-top: 15px;
+  margin-right: 8px;
+
+  padding: 9px 14px;
+
+  border: none;
+  border-radius: 6px;
+
+  background-color: #24382a;
+  color: #f3ead8;
+
+  font-size: 12px;
+
+  cursor: pointer;
+
+  transition: background-color 0.2s ease;
+}
+
+.produto-item button:hover {
+  background-color: #36543e;
+}
+
+
+/* Responsividade */
+
+@media (max-width: 750px) {
+
+  .produtos {
+    padding: 50px 25px 70px;
+  }
+
+  .produtos h1 {
+    font-size: 40px;
+  }
+
+  .produto-form {
+    padding: 22px;
+  }
+
+  .produtos-lista {
+    grid-template-columns: 1fr;
+  }
+
+  .produto-item {
+    padding: 22px;
+  }
+}

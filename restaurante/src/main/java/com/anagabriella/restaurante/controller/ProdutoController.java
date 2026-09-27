@@ -11,6 +11,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+
 import java.util.List;
 import java.util.Optional;
 
@@ -39,13 +40,16 @@ public class ProdutoController {
         return produtoService.buscarTodosProdutos();
     }
 
-@PutMapping
-    public Produto atualizarProduto(@RequestBody Produto produto) {
-        return produtoService.atualizarProduto(produto);
-    }
+@PutMapping("/{id}")
+public Produto atualizarProduto(
+        @PathVariable Integer id,
+        @RequestBody Produto produto) {
 
-@DeleteMapping
-    public void apagarProduto(@RequestBody Produto produto) {
-        produtoService.apagarProduto(produto);
+    return produtoService.atualizarProduto(id, produto);
+}
+
+@DeleteMapping("/{id}")
+    public void apagarProduto( @PathVariable Integer id) {
+        produtoService.apagarProduto(id);
     }
 }

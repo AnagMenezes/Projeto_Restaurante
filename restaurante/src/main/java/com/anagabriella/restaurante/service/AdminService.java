@@ -11,6 +11,7 @@ public class AdminService {
 
     public AdminService(AdminRepository adminRepository) {
         this.adminRepository = adminRepository;
+        ///injeção de dependencia por contrutor
 }
 
     public Admin cadastrarAdmin(Admin admin) {

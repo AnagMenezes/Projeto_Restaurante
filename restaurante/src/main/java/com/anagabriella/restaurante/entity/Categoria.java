@@ -16,7 +16,18 @@ public class Categoria {
     @OneToMany(mappedBy = "categoria")
     private List<Produto> produtos;
 
-public String getnome(){
-    return nome;
+    public String getNome() {
+        return nome;
+    }
+
+    public void setNome(String nome) {
+        this.nome = nome;
+    }
+
+    public Integer getId(){
+        return id;
+    }
+    public void setId(Integer id) {
+        this.id = id;
 }
 }

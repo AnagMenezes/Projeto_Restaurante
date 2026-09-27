@@ -37,13 +37,18 @@ private final CategoriaService categoriaService;
         return categoriaService.buscarTodasCategorias();
     }
 
-@PutMapping
-    public Categoria atualizarCategoria(@RequestBody Categoria categoria) {
-        return categoriaService.atualizarCategoria(categoria);
-    }
+@PutMapping("/{id}")
+public Categoria atualizarCategoria(
+        @PathVariable Integer id,
+        @RequestBody Categoria categoria) {
 
-@DeleteMapping
-    public void apagarAdmin(@RequestBody Categoria categoria) {
-        categoriaService.apagarCategoria(categoria);
-    }
+    categoria.setId(id);
+
+    return categoriaService.atualizarCategoria(id, categoria);
+}
+
+@DeleteMapping("/{id}")
+    public void deletarCategoria(@PathVariable Integer id) {
+        categoriaService.deletarCategoria(id);
+}
 }

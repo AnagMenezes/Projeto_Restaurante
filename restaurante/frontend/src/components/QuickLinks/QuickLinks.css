@@ -1,0 +1,134 @@
+.quick-links {
+  padding: 25px 12px 35px;
+  background-color: #f3dcae;
+}
+
+.quick-links h2 {
+  margin: 0 0 25px;
+
+  text-align: center;
+
+  font-family: 'Playfair Display', serif;
+  font-size: 28px;
+
+  color: #24382a;
+}
+
+.quick-links-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 15px;
+
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.quick-link {
+  min-height: 180px;
+
+  padding: 25px;
+
+  box-sizing: border-box;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+
+  border-radius: 8px;
+
+  color: #f3ead8;
+  text-decoration: none;
+
+  position: relative;
+  overflow: hidden;
+
+  background-color: #24382a;
+
+  transition: transform 0.2s ease;
+}
+
+.quick-link:hover {
+  transform: translateY(-3px);
+}
+
+/* camada escura sobre a imagem */
+
+.quick-link::before {
+  content: '';
+
+  position: absolute;
+  inset: 0;
+
+  background: linear-gradient(
+    to right,
+    rgba(20, 48, 34, 0.95),
+    rgba(20, 48, 34, 0.45)
+  );
+
+  z-index: 0;
+}
+
+/* conteúdo do card */
+
+.quick-link h3,
+.quick-link p,
+.quick-link a {
+  position: relative;
+  z-index: 1;
+}
+
+.quick-link h3 {
+  margin: 0 0 8px;
+
+  font-family: 'Playfair Display', serif;
+  font-size: 25px;
+}
+
+.quick-link p {
+  max-width: 230px;
+
+  margin: 0 0 12px;
+
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+.quick-link a {
+  color: #ebdfc9;
+
+  font-size: 13px;
+  font-weight: bold;
+
+  text-decoration: none;
+}
+
+/* celular */
+
+@media (max-width: 800px) {
+
+  .quick-links-container {
+    grid-template-columns: 1fr;
+  }
+
+  .quick-link {
+    min-height: 200px;
+  }
+}
+
+.quick-link:nth-child(1) {
+  background-image: url('../../assets/fotocardapio.png');
+  background-size: cover;
+  background-position: center;
+}
+
+.quick-link:nth-child(2) {
+  background-image: url('../../assets/fotopromocoes.png');
+  background-size: cover;
+  background-position: center;
+}
+
+.quick-link:nth-child(3) {
+  background-image: url('../../assets/fotoeventos.png');
+  background-size: cover;
+  background-position: center;
+}

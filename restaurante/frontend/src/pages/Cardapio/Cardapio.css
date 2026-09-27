@@ -1,0 +1,225 @@
+.cardapio {
+  min-height: 100vh;
+
+  padding: 70px 80px 100px;
+
+  box-sizing: border-box;
+
+  background-color: #f3dcae;
+  color: #24382a;
+}
+
+
+/* Cabeçalho */
+
+.cardapio h1 {
+  max-width: 1000px;
+  margin: 0 auto 12px;
+
+  font-family: 'Playfair Display', serif;
+  font-size: 52px;
+  line-height: 1.1;
+
+  color: #24382a;
+}
+
+.cardapio-intro {
+  max-width: 1000px;
+
+  margin: 0 auto;
+
+  font-size: 17px;
+  line-height: 1.6;
+
+  color: #4d554c;
+}
+
+
+/* Divisor decorativo */
+
+.cardapio-divisor {
+  max-width: 1000px;
+
+  display: flex;
+  align-items: center;
+  gap: 15px;
+
+  margin: 45px auto 30px;
+
+  color: #a88955;
+}
+
+.cardapio-divisor::before,
+.cardapio-divisor::after {
+  content: '';
+
+  height: 1px;
+
+  flex: 1;
+
+  background-color: #cbbd9f;
+}
+
+.cardapio-divisor span {
+  font-size: 16px;
+}
+
+
+/* Título das categorias */
+
+.categorias-titulo {
+  max-width: 1000px;
+
+  margin: 0 auto 25px;
+
+  font-family: 'Playfair Display', serif;
+
+  font-size: 28px;
+
+  font-weight: normal;
+
+  color: #24382a;
+}
+
+
+/* Categorias */
+
+.categorias-cardapio {
+  display: grid;
+
+  grid-template-columns: repeat(2, minmax(250px, 1fr));
+
+  gap: 25px;
+
+  max-width: 1000px;
+
+  margin: 0 auto;
+}
+
+
+/* Card */
+
+.categoria-card {
+  min-height: 240px;
+
+  padding: 30px;
+
+  box-sizing: border-box;
+
+  display: flex;
+  align-items: flex-end;
+
+  position: relative;
+
+  overflow: hidden;
+
+  border-radius: 12px;
+
+  background-color: #24382a;
+
+  color: #f3ead8;
+
+  text-decoration: none;
+
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+
+/* Gradiente para o futuro background-image */
+
+.categoria-card::before {
+  content: '';
+
+  position: absolute;
+
+  inset: 0;
+
+  background: linear-gradient(
+    to top,
+    rgba(20, 43, 30, 0.95),
+    rgba(20, 43, 30, 0.15)
+  );
+
+  z-index: 0;
+}
+
+
+/* Conteúdo */
+
+.categoria-card h2 {
+  position: relative;
+
+  z-index: 1;
+
+  margin: 0;
+
+  font-family: 'Playfair Display', serif;
+
+  font-size: 30px;
+
+  color: #f3ead8;
+
+  text-decoration: none;
+}
+
+
+/* Hover */
+
+.categoria-card:hover {
+  transform: translateY(-5px);
+
+  box-shadow:
+    0 12px 28px rgba(36, 56, 42, 0.20);
+}
+
+.categoria-card:hover::before {
+  background: linear-gradient(
+    to top,
+    rgba(20, 43, 30, 0.90),
+    rgba(20, 43, 30, 0.05)
+  );
+}
+
+
+/* Estados do link */
+
+.categoria-card:link,
+.categoria-card:visited,
+.categoria-card:hover,
+.categoria-card:active {
+  color: #f3ead8;
+
+  text-decoration: none;
+}
+
+
+/* Responsividade */
+
+@media (max-width: 700px) {
+
+  .cardapio {
+    padding: 50px 25px 70px;
+  }
+
+  .cardapio h1 {
+    font-size: 40px;
+  }
+
+  .cardapio-intro {
+    font-size: 16px;
+  }
+
+  .categorias-titulo {
+    font-size: 25px;
+  }
+
+  .categorias-cardapio {
+    grid-template-columns: 1fr;
+  }
+
+  .categoria-card {
+    min-height: 200px;
+  }
+}
